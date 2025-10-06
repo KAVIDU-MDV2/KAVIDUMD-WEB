@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAVIDU-MD ADMIN WEB</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      background: #000;
+    }
+
+    /* Background Video */
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      padding: 25px;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ff2e2e;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 0 0 15px #ff0000;
+      margin-top: 15px;
+    }
+
+    header p {
+      color: #ddd;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    /* Profile Circle */
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff2e2e;
+      box-shadow: 0 0 15px #ff4d4d;
+    }
+
+    .btn-main {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #ff0000, #ff4d4d);
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 0 12px #ff4d4d;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-main:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff0000;
+    }
+
+    section {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 600px;
+      background: rgba(0,0,0,0.8);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #ff0000;
+      text-align: center;
+    }
+
+    section h2 { color: #ff2e2e; margin-bottom: 15px; }
+    section p { color: #ddd; font-size: 16px; line-height: 1.5; }
+
+    .contact-btn, .bot-btn, .deploy-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #ff0000, #ff4d4d);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 12px #ff4d4d;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-btn:hover, .bot-btn:hover, .deploy-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff0000;
+    }
+
+    .music-btn {
+      position: fixed; bottom: 25px; right: 25px;
+      width: 60px; height: 60px;
+      border-radius: 50%; border: none;
+      background: linear-gradient(45deg, #ff0000, #ff4d4d);
+      color: #fff; font-size: 22px;
+      cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+    .music-btn:hover { transform: scale(1.1); }
+
+    footer {
+      margin-top: 50px; padding: 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      color: #ccc; font-size: 14px; width: 100%;
+    }
+    footer strong { color: #ff2e2e; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="bg-video" autoplay loop muted playsinline>
+    <source src="https://files.catbox.moe/cn6jpm.mp4" type="video/mp4">
+  </video>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="https://files.catbox.moe/d2e3s0.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Header -->
+  <header>
+    <img src="https://files.catbox.moe/t6lcet.jpg" alt="Kavindu Induwara" class="profile-pic">
+    <h1>KAVIDU-MD WEB</h1>
+    <p>HELLO MY FRIENDS</p>
+    <a href="https://wa.me/94767054052?text=Hello Kavindu! I visited your website and want to connect." class="btn-main">💬 Contact Me on WhatsApp</a>
+  </header>
+
+  <!-- About Section -->
+  <section>
+    <h2>web create</h2>
+    <p>I'm Kavindu Induwara — a web designer and WhatsApp bot developer.  
+    I create and deploy WhatsApp bots, design modern websites, and provide automation solutions.  
+    Contact me directly for any project or collaboration!</p>
+    <a href="https://wa.me/94767054052?text=Hi Kavindu! I'm interested in your web design and bot development services." class="contact-btn">📞 Message Kavindu</a>
+  </section>
+
+  <!-- Bot Sale Section -->
+  <section>
+    <h2>WhatsApp Bot Base for Sale</h2>
+    <p>Purchase fully working WhatsApp bot bases ready for deployment.  
+    Includes features, plugins, and premium support for setup!</p>
+    <a href="https://wa.me/94767054052?text=Hi Kavindu! I'm interested in buying a WhatsApp bot base." class="bot-btn">🤖 Get Bot Base</a>
+  </section>
+
+  <!-- Bot Deployment Section -->
+  <section>
+    <h2>WhatsApp Bot Deploy</h2>
+    <p>Need help deploying your WhatsApp bot?  
+    I provide quick and secure deployment services — fully configured and ready to run!</p>
+    <a href="https://wa.me/94767054052?text=Hi Kavindu! I want you to deploy my WhatsApp bot." class="deploy-btn">🚀 Deploy  Bot</a>
+  </section>
+
+  <!-- Music Toggle -->
+  <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by <strong>Kavindu Induwara</strong></p>
+    <p>© 2025 KAVIDU-MD ADMIN WEB | All Rights Reserved</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const music = document.getElementById("bg-music");
+    let playing = false;
+    function toggleMusic() {
+      if (playing) { music.pause(); } else { music.play(); }
+      playing = !playing;
+    }
+  </script>
+
+</body>
+</html>
